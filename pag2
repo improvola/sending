@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Mapa estático</title>
+<meta charset="utf-8" />
+</head>
+<body>
+ <h1>Ejemplo de mapa estático</h1>
+ <img src="https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=43.2686751,-2.9340005&zoom=16&size=400x400&markers=color:yellow|43.2686751,-2.9340005" />
+</body>
+</html>
