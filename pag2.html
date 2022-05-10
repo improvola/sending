@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<title>Mapa estático</title>
-<meta charset="utf-8" />
-</head>
-<body>
- <h1>Ejemplo de mapa estático</h1>
- <img src="https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=43.2686751,-2.9340005&zoom=16&size=400x400&markers=color:yellow|43.2686751,-2.9340005" />
-</body>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+              });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap"
+        async defer></script>
+  </body>
 </html>
