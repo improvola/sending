@@ -72,9 +72,9 @@
 <div align="center">
 
 <button onclick="findMe()">Mostrar ubicación</button>
-  <div id="map"><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7P8vpE68CYGrVQKhzTh7HmDcZ60MXTZA"></script></div>
+  <div id="map"></div>
   
-  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7P8vpE68CYGrVQKhzTh7HmDcZ60MXTZA"></script>
   <script>
     function findMe(){
       var output = document.getElementById('map');
@@ -87,13 +87,13 @@
       }
 
       //Obtenemos latitud y longitud
-      function localizacion(posicion){
+      function localizacion(position){
 
-        var latitude = posicion.coords.latitude;
-        var longitude = posicion.coords.longitude;
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
 
         var imgURL="https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyD7P8vpE68CYGrVQKhzTh7HmDcZ60MXTZA";
-		<img src="https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=43.2686751,-2.9340005&zoom=16&size=400x400&markers=icon:http://chart.apis.google.com/chart?chst=d_map_pin_icon|color:yellow|43.2686751,-2.9340005&markers=color:blue|43.2686751,-2.9320005" />;
+		
 			
         output.innerHTML ="<img src='"+ imgURL +"'>";
 
